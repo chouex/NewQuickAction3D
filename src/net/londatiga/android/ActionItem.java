@@ -1,5 +1,6 @@
 package net.londatiga.android;
 
+import android.app.Activity;
 import android.graphics.drawable.Drawable;
 import android.graphics.Bitmap;
 
@@ -33,6 +34,10 @@ public class ActionItem {
         this.actionId = actionId;
     }
     
+    public ActionItem(Activity ctx,int actionId, int title, int icon) {
+    	this(actionId,ctx.getString(title),ctx.getResources().getDrawable(icon));
+    }
+
     /**
      * Constructor
      */
